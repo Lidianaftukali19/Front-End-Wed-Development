@@ -1,0 +1,47 @@
+import React, { useState } from 'react';
+
+function StudentProfile() {
+  const [student, setStudent] = useState({
+    firstName: '',
+    lastName: '',
+    age: '',
+    email: '',
+    school: ''
+  });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setStudent(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  return (
+    <div>
+      <h2>Student Profile</h2>
+      <div>
+        <label>First Name:</label>
+        <input type="text" name="firstName" value={student.firstName} onChange={handleInputChange} />
+      </div>
+      <div>
+        <label>Last Name:</label>
+        <input type="text" name="lastName" value={student.lastName} onChange={handleInputChange} />
+      </div>
+      <div>
+        <label>Age:</label>
+        <input type="number" name="age" value={student.age} onChange={handleInputChange} />
+      </div>
+      <div>
+        <label>Email:</label>
+        <input type="email" name="email" value={student.email} onChange={handleInputChange} />
+      </div>
+      <div>
+        <label>School:</label>
+        <input type="text" name="school" value={student.school} onChange={handleInputChange} />
+      </div>
+    </div>
+  );
+}
+
+export default StudentProfile;

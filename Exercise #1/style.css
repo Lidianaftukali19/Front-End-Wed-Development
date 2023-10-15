@@ -1,0 +1,22 @@
+body {
+    font-family: callbri;
+}
+.box {
+    margin-button: 10px;
+}
+.box label {
+    display: inline-block;
+    widht: 80px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.box input, box textarea {
+    border-radius:3px;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+}
+
+.btn-submit {
+    margin-left: 90px;
+}
