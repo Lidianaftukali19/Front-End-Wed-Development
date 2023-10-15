@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Scope using var</title>
+</head>
+<body>
+    <script>
+        function exampleFunction() {
+            var a = 5; // a can only be accessed within the function
+            console.log("Nilai a:", a); // Output: 5
+        }
+        
+        exampleFunction();
+
+        // Uncommenting the below line will cause an error because a can't be accessed outside of the function
+        // console.log("Nilai a di luar fungsi: ", a);
+    </script>
+</body>
+</html>

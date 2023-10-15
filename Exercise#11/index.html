@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Block Scope with let & const</title>
+</head>
+<body>
+    <script>
+        if (true) {
+            let x = 10; // x can only be accessed within this block
+            const y = 20; // y can also only be accessed within this block
+            console.log("Nilai x:", x); // Output: 10
+            console.log("Nilai y:", y); // Output: 20
+        }
+
+        // Uncommenting the below line will cause an error because x and y can't be accessed outside of the block
+        // console.log("Nilai x di luar blok:", x);
+    </script>
+</body>
+</html>

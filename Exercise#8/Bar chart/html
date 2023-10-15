@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Donut Chart with Plotly.js</title>
+</head>
+
+<body>
+    <h1>Draw Dynamic Donut Charts with Plotly.js</h1>
+
+    <table>
+        <!-- ... same as your table structure ... -->
+    </table>
+
+    <br><button id="btn-update">Update Chart</button><br>
+    <hr>
+
+    <div id="myPlot" style="width:100%; max-width:700px"></div>
+
+    <script type="text/javascript" src="myscripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+// Create function to plot chart.
+function plotDonut(indo, france, canada, usa, argen) {
+    // Data array
+    var xArray = ["Indonesia", "France", "Canada", "USA", "Argentina"];
+    var yArray = [indo, france, canada, usa, argen];
+
+    // Define Layout
+    var layout = {
+        title: "World Wide Wine Production"
+    };
+
+    // Define Data
+    var data = [{
+        labels: xArray,
+        values: yArray,
+        hole: .4,
+        type: "pie"
+    }];
+
+    // Display using Plotly
+    Plotly.newPlot("myPlot", data, layout);
+}
+
+// View default donut chart
+plotDonut(55, 49, 44, 24, 15);
+
+// Set default values to input fields
+document.getElementById("id-indo").value = "55";
+document.getElementById("id-fran").value = "49";
+document.getElementById("id-cana").value = "44";
+document.getElementById("id-usa").value = "24";
+document.getElementById("id-arge").value = "15";
+
+// Get the button, and when the user clicks on it, execute myFunction
+document.getElementById("btn-update").onclick = function() {
+    // Get input values
+    var valIndo = document.getElementById("id-indo").value;
+    var valFran = document.getElementById("id-fran").value;
+    var valCana = document.getElementById("id-cana").value;
+    var valUsa = document.getElementById("id-usa").value;
+    var valArge = document.getElementById("id-arge").value;
+
+    // Update donut chart
+    plotDonut(valIndo, valFran, valCana, valUsa, valArge);
+};
