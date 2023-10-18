@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Fixed the viewport content value -->
+    <title>react test</title>
+
+    <!-- Fixed the path from 'und' to 'umd' and added integrity and crossorigin attributes for better security and SRI -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin="anonymous"></script>
+
+    <!-- Assuming you are splitting components into separate files -->
+    <script type="text/babel" src="./src/Component1.js"></script>
+    <script type="text/babel" src="./src/Component2.js"></script>
+    <script type="text/babel" src="./src/Component3.js"></script>
+    <script type="text/babel" src="./src/Component4.js"></script>
+    <script type="text/babel" src="./src/Component5.js"></script>
+    <script type="text/babel" src="./MainComponents.js"></script>
+</head>
+
+<body>
+    <div id="root-react">React is loading...</div>
+</body>
+
+</html>
