@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    
+    <script type="text/babel">
+        class Header extends React.Component {
+            constructor() {
+                super();
+                this.state = {
+                    angka1: "8",
+                    angka2: "2",
+                    result: "10"
+                };
+            }
+            
+            setVal1 = (val1) => {
+                this.setState({ angka1: "" + val1 });
+            }
+
+            setVal2 = (val2) => {
+                this.setState({ angka2: "" + val2 });
+            }
+
+            funcMultiply = () => {
+                let hasil = parseInt(this.state.angka1) * parseInt(this.state.angka2);
+                this.setState({ result: "" + hasil });
+            }
+
+            funcDivide = () => {
+                let hasil = parseInt(this.state.angka1) / parseInt(this.state.angka2);
+                this.setState({ result: "" + hasil });
+            }
+
+            funcSubtract = () => {
+                let hasil = parseInt(this.state.angka1) - parseInt(this.state.angka2);
+                this.setState({ result: "" + hasil });
+            }
+
+            funcAdd = () => {
+                let hasil = parseInt(this.state.angka1) + parseInt(this.state.angka2);
+                this.setState({ result: "" + hasil });
+            }
+
+            render() {
+                return (
+                    <div>
+                        <h1>Simple Calculator ReactJs</h1>
+                        Input 1: <input value={this.state.angka1} onChange={(e) => this.setVal1(e.target.value)} /> <br />
+                        Input 2: <input value={this.state.angka2} onChange={(e) => this.setVal2(e.target.value)} /> 
+                        <h1>Result: {this.state.result}</h1>
+                        <button onClick={this.funcMultiply}>Multiply</button>
+                        <button onClick={this.funcDivide}>Division</button>
+                        <button onClick={this.funcSubtract}>Subtract</button>
+                        <button onClick={this.funcAdd}>Addition</button>
+                    </div>
+                );
+            }
+        }
+
+        ReactDOM.render(<Header />, document.getElementById("app"));
+    </script>
+</body>
+</html>
